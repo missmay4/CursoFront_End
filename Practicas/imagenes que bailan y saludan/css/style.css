@@ -1,0 +1,64 @@
+/* 
+Cuatro imagenes que mediante un botón cada una hagan diferentes translaciones
+ */
+
+.wrapper2 {
+    width: 50%;
+}
+
+img{
+    max-width: 23%;
+}
+
+/* ---- Translaciones ---- */
+
+.wrapper2 #ice1 {
+    transform: translateZ(100px);
+    transition: 2s;
+}
+
+.boton:hover + #ice1{ /* Cuando hacemos hover sobre el boton, el llevar un + */
+    -moz-transform: translateX(60px);
+    -webkit-transform: translateX(60px);
+    -o-transform: translateX(60px);
+    -ms-transform: translateX(60px);
+    transform: translateX(60px);
+}
+
+.wrapper2 #ice2 {
+    transition: 2s;
+}
+
+.boton:hover + #ice2{
+    -moz-transform: rotateY(2000deg);
+    -webkit-transform: rotateY(2000deg);
+    -o-transform: rotateY(2000deg);
+    -ms-transform: rotateY(2000deg);
+    transform: rotateY(2000deg);
+}
+
+.wrapper2 #ice3 {
+    transition: 2s;
+}
+
+.boton:hover + #ice3{
+    -moz-transform: skewX(40deg);
+    -webkit-transform: skewX(40deg);
+    -o-transform: skewX(40deg);
+    -ms-transform: skewX(40deg);
+    transform: skewX(40deg);
+}
+
+.wrapper2 #ice4 {
+    transition: 2s;
+}
+
+.boton:hover + #ice4{
+    -moz-transform: scale(-1);
+    -webkit-transform: scale(-1);
+    -o-transform: scale(-1);
+    -ms-transform: scale(-1);
+    transform: scale(-1);
+}
+
+/* ---- Translaciones ---- */

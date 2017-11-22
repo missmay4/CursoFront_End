@@ -1,0 +1,63 @@
+/* 
+Tres cajas cuadradas de 99px cada una de un color distinto que reutilizaremos en un futuro y una
+de ellas tendra un borde negro (nunca habra otra igual)
+ */
+
+.box {
+    width: 99px;
+    height: 99px;
+    /* display: inline-block;*/
+    transition: transform 2s;
+}
+
+.bg-red {
+    background-color: #F03434;
+}
+
+.bg-blue {
+    background-color: #3498DB;
+}
+
+.bg-green {
+    background-color: #26C281;
+    width: 93px;
+    height: 93px;
+}
+
+.bg-grey {
+    background-color: #95a5a6;
+}
+
+/* ---- Translaciones ---- */
+
+div.box#box1:hover {
+    /* transform: translate(x, y); */
+    transform: translate(200px, 0);
+}
+
+
+div.box#box2 {
+    border: 3px solid black;
+    /*transform: translate(100px, 0);*/
+    transform: rotate(30deg) translateZ(100px);
+    /*transform: translate(100px, 0); /*rotate(30deg);*/
+    /* transform-origin: right; /* cambiar el eje desde donde rota */
+}
+
+div.box#box2:hover {
+    transform: rotateY(2000deg);
+}
+
+div.box#box3:hover {
+    transform: scale(0.5);
+}
+
+div.box#box4:hover {
+    transform: skewX(-40deg);
+    transform-origin: bottom;
+    
+}
+
+div.box#
+
+/* ---- Translaciones ---- */
