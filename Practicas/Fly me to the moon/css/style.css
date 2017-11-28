@@ -1,0 +1,89 @@
+.wrapper {
+    width: 960px;
+    margin: 0 auto;
+}
+.header {
+    float: left;
+    width: 100%;
+    background-color: white;
+}
+.fotter{
+    float: left;
+    width: 100%;
+    background-color: white;
+}
+.centrar {
+    width: 100%;
+    margin: 0, auto;
+}
+
+#starwall {
+    background-image: url(../img/stars.jpg);
+}
+
+.base {
+    width: 35%; /* tamaño de la base definido */
+}
+.nave {
+    width: 15%; /* tamaño de la nave definido */
+}
+
+/* --------------------- Animaciones --------------------------- */
+
+#StarKiller {
+    position: fixed;
+    top: 100px;
+    left: 30%;
+}
+
+#Xwing {
+    position: fixed;
+    top: 200px;
+    left: 10%;
+    width: 15%;
+    animation: volar 10s;
+}
+
+@keyframes volar {
+    0% {
+        width: 0;
+        height: 0;
+        left: 10%;
+        
+    }
+    
+    25% {
+        width: 0;
+        height: 0;
+        left: 80%;
+    }
+    
+    50% {
+        top: 50%;
+        left: 50%;
+        width: 120px;
+        height: 120px;
+        margin-top: 60px;
+        margin-left: 60px;
+    }
+    
+    75% {
+        top: 50%;
+        left: 50%;
+        width: 120px;
+        height: 120px;
+        margin-top: -60px;
+        margin-left: -60px;
+    }
+    
+    100% {
+        width: 0;
+        height: 0;
+        left: 10%;
+    }
+}
+
+
+/* --------------------- Animaciones --------------------------- */
+
+/* z-index para poner que pase por detrás */
