@@ -1,0 +1,138 @@
+#db-bg {
+    background-image: url(../img/fondo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    /*background: url (../img/fondo.png) no-repeat cover center center fixed;*/
+}
+
+.saiyan {
+    width: 10%;
+}
+
+#goku {
+    /* transform: translate(150px, 240px); */
+    position: fixed; /* elemento que quieres colocar respecto a otro elemento */
+    top: 150px; /* distancia en vertical (px) - en horizontal % */
+    /* bottom: 120px; */
+    left: 30%;
+    /* right: ?? */
+    animation: gokuTransporte 5s;
+}
+
+#vegeta {
+    position: fixed;
+    top: 150px;
+    right: 20%;
+    
+}
+
+#bolazo {
+    position: fixed;
+    top: 190px;
+    right: 30%;
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    /* background-color: cadetblue; */
+    background: radial-gradient(#e74c3c, #e67e22, #f1c40f);
+    animation: lanzarBolazo 5s;
+    animation-timing-function: ease-out;
+}
+
+/* --------------------- Animation Styles --------------------- */
+
+@keyframes lanzarBolazo {
+    
+    0% { /* Instante inicial del objeto. Medida de tiempo */
+        
+        width: 0;
+        height: 0;
+        right: 30%;
+    }
+    
+    30% {
+        width: 0;
+        height: 0;
+        right: 30%;
+    }
+    
+    50% { 
+        width: 100px;
+        height: 100px;
+        right: 30%;
+    }
+    
+    90% {
+        width: 100px;
+        height: 100px;
+        right: 30%;
+    }
+
+    100% { /* Instante final del objeto */
+        width: 100px;
+        height: 100px;
+        right: 400%;
+    }
+    
+}
+
+@keyframes gokuTransporte {
+    0% { /* Instante inicial del objeto. Medida de tiempo */
+        left: 30%;
+        visibility: visible;
+    }
+    
+    9% {
+        left: 30%;
+        visibility: visible;
+    }
+    
+    10% {
+        left: 30%;
+        visibility: hidden;
+    }
+    
+    19% {
+        left: 30%;
+        visibility: hidden;
+    }
+    
+    20% {
+        left: 30%;
+        visibility: visible;
+    }
+    
+    29% {
+        left: 30%;
+        visibility: visible;
+    }
+    
+    30% {
+        left: 30%;
+        visibility: hidden;
+    }
+    
+    39% {
+        left: 30%;
+        visibility: hidden;
+    }
+    
+    40% {
+        left: 30%;
+        /* width: 0; */
+    }
+    
+    80% {
+        visibility: hidden;
+    }
+    
+    100% { /* Instante final del objeto */
+        left: 80%;
+        visibility: visible;
+        /*width: 10%;*/
+    }
+}
+
+/* --------------------- Animation Styles --------------------- */

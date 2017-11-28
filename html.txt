@@ -8,7 +8,7 @@
 2. todos los divs deben tener: width expresado en % y float left or right
 3. margin + width 100%
 
-
+-------------------------------------------------------------------------------------------
 
 Formularios - Campos - Valores
 
@@ -61,6 +61,7 @@ Todo formulario tiene un submit (action) y los datos se envian por un method (ge
 2. Para almacenar datos nuevos, modificar o borrar. 
 Todo input tiene que tener un name al que se le puede añadir un label. 
 
+-------------------------------------------------------------------------------------------
 
 Barra de navegación / Menu (Lista de enlaces)
 
@@ -93,11 +94,7 @@ Transiciones antiguamente
 -ms- transition: background-color 2s; /* explorer */
 
 
-
-
 /* Estilo para cosas dentro de la barra */
-
-
 
 #primero { esto da estilo a elementos que tengan como id=primero 
 
@@ -121,6 +118,7 @@ background-color: ;
 
 Transform: Scale, Rotate, Translate, Skew, (Matrix)
 
+-------------------------------------------------------------------------------------------
 
 Tipografias (DAFONT)
 
@@ -142,6 +140,43 @@ Hacer una tipografia de iconos:
 - icomoon
 
 pegar de la hoja de estilos que viene al bajarse los iconos - @fontface - cambiar nombres y
+
+-------------------------------------------------------------------------------------------
+
+
+Animaciones: 
+
+Se puede pintar cada imagen pixel a pixel o vector a vector. 
+
+Raster/Pixels
+Vector/Vectorial 
+
+viewport (Ventana de una esquina a otra)
+Keyframe - Estado de las cosas en las que esta la animacion, al empezar y acabar. Se puede elegir
+cuanto va a durar la transición. (Keyframe = Guión) (Asignacion del guión)
+
+1. Para cada frame: Valores de propiedades
+2. Establecer una orden
+
+Position static: Se comportan segun diga display. Se decide las cosas con inline o inline-block
+Position float: Izq o dcha
+
+Position relative: Top/botom, Left/right - Coloco un objeto en una coordenada de manera que el hueco
+que deja lo sigue ocupando. El origen de coordenadas seria el objeto en el html. 
+Position absolut: Top/botom, Left/right - El padre es el document y el espacio que ocupa lo libera, de manera
+que los elementos van a ocupar ese espacio. 
+
+- Absolut y relative no se suelen usar solos. 
+
+Position fixed: Top/botom, Left/right - El padre es la ventana. Es un absolut tramposo, se quedan quietos.
+Para cosas que se quiere que se queden fijos aunque muevas o hagas scroll.  
+Transform: Coordenadas
+
+Overflow: Los hijos ocupan mas que el padre. Se pueden ocultar las barras de scroll. 
+
+Animar en CSS es decirle a los elementos cual va a ser su valor de estilo en cada keyframe y un componente
+de tiempo. Los keyframes se definen con @keyframe + nombre.
+
 
 
 
