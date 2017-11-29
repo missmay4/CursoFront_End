@@ -1,0 +1,47 @@
+#imagen1 {
+    border: 2px solid black;
+    padding: 100px;
+    background-image: url(../img/avengers.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+#imagen2 {
+    border: 2px solid black;
+    padding: 100px;
+    background-image: url(../img/avengers.jpg);
+    background-repeat: no-repeat;
+    background-size: 300px 200px;
+}
+
+#imagen3 {
+    border: 2px solid black;
+    padding: 100px;
+    background-image: url(../img/avengers.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#imagen4 {
+    border: 2px solid black;
+    padding: 100px; /*373px;*/
+    background-image: url(../img/avengers.jpg) ;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#imagen5 {
+    border: 2px solid black;
+    padding: 100px; /*373px;*/
+    background-image: url(../img/avengers.jpg) ;
+    background-repeat: no-repeat;
+    background-size: 300% 200%;
+}
+
+#imagen6 {
+    border: 2px solid black;
+    padding: 100px; /*373px;*/
+    background-image: url(../img/avengers.jpg) ;
+    background-repeat: no-repeat;
+    background-size: initial;
+}

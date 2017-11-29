@@ -1,0 +1,44 @@
+.home {
+    width: 100px;
+    margin: 0 auto;
+    float: left;
+    padding: 1%;
+}
+
+.wrapper {
+    width: 960px;
+    margin: 0 auto;
+    float: left;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #8e44ad;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111111;
+}
+
+
+@media screen and (max-width: 700px) and (min-width: 500px), (min-width: 1520px) {
+    p {
+        float: right;
+    }
+}
+
