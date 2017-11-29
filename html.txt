@@ -139,7 +139,8 @@ Hacer una tipografia de iconos:
 - font awesome
 - icomoon
 
-pegar de la hoja de estilos que viene al bajarse los iconos - @fontface - cambiar nombres y
+pegar de la hoja de estilos que viene al bajarse los iconos en el css que estemos usando 
+- @fontface - cambiar nombres y ??
 
 -------------------------------------------------------------------------------------------
 
@@ -175,7 +176,8 @@ Transform: Coordenadas
 Overflow: Los hijos ocupan mas que el padre. Se pueden ocultar las barras de scroll. 
 
 Animar en CSS es decirle a los elementos cual va a ser su valor de estilo en cada keyframe y un componente
-de tiempo. Los keyframes se definen con @keyframe + nombre.
+de tiempo. Los keyframes se definen con @keyframe + nombre. 
+Para asociar la animacion se mete dentro del propio elemento. 
 
 
 

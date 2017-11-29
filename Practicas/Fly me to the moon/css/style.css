@@ -2,95 +2,93 @@
     width: 960px;
     margin: 0 auto;
 }
+
 .header {
     float: left;
     width: 100%;
     background-color: white;
+    text-align: center;
 }
+
+.main {
+    float: left;
+    width: 100%;
+    height: 525px;
+}
+
 .fotter{
     float: left;
     width: 100%;
+    text-align: right;
     background-color: white;
-}
-.centrar {
-    width: 100%;
-    margin: 0, auto;
 }
 
 #starwall {
     background-image: url(../img/stars.jpg);
+    z-index: -3;
 }
 
 .base {
     width: 35%; /* tamaño de la base definido */
 }
+
 .nave {
-    width: 15%; /* tamaño de la nave definido */
+    width: 10%; /* tamaño de la nave definido */
 }
 
-/* --------------------- Animaciones --------------------------- */
-
 #StarKiller {
-    position: fixed;
+    position: absolute;
     top: 100px;
     left: 30%;
 }
+
+/* --------------------- Animaciones -------------------------- */
 
 #Xwing {
     position: fixed;
     top: 200px;
     left: 10%;
-    width: 15%;
-    animation: volar 10s;
+    z-index: 1;
+    animation: volar 9s ease-in-out infinite;
 }
 
 @keyframes volar {
     0% {
-        width: 0;
-        height: 0;
+        top: 200px;
         left: 10%;
         z-index: 1;
+        transform: rotate(0deg) translateX(5px) translateY(120px) rotate(-30deg) scale(1);
     }
     
     25% {
-        top: 50%;
-        left: 50px;
-        width: 0;
-        height: 0;
-        margin-top: 50px;
-        margin-left: 50px;
+        top: 400px;
+        left: 37%;
+        width: 20%;
         z-index: 1;
+        transform: rotate(90deg) translateX(5px) translateY(120px) rotate(-90deg) scale(.75);
     }
     
     50% {
-        top: 50%;
+        top: 200px;
         left: 80%;
-        width: 120px;
-        height: 120px;
-        margin-top: 10px;
-        margin-left: 60px;
-        z-index: 0;
+        width: 10%;
+        z-index: -1; /* pasa por detrás */
+        transform: rotate(180deg) translateX(5px) translateY(120px) rotate(180deg) scale(.60);
     }
     
     75% {
-        top: 10%;
-        left: 20%;
-        width: 120px;
-        height: 120px;
-        margin-top: 10px;
-        margin-left: 60px;
-        z-index: 0;
+        top: 90px;
+        left: 42%;
+        z-index: -1; /* pasa por detrás */
+        transform: rotate(270deg) translateX(5px) translateY(120px) rotate(-270deg) scale(.75);
     }
     
     100% {
-        width: 0;
-        height: 0;
+        top: 200px;
         left: 10%;
-        z-index: 1;
+        z-index: -1; /* pasa por detrás */
+        transform: rotate(360deg) translateX(5px) translateY(120px) rotate(-30deg) scale(1);
     }
 }
 
-
-/* --------------------- Animaciones --------------------------- */
-
-/* z-index para poner que pase por detrás */
+/* --------------------- Animaciones -------------------------- */
