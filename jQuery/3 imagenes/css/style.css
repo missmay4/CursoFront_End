@@ -1,0 +1,43 @@
+body {
+  background-color: white;
+}
+
+img {
+  width: 30%;
+  height: 100%;
+  margin-bottom: 10px;
+}
+
+.grizz1 {
+  opacity: 0;
+}
+.panda1 {
+  opacity: 0;
+}
+.icebear1{
+  opacity: 0;
+}
+
+.myImage {
+  opacity: 1;
+}
+
+div.button {
+  border-radius: 30px;
+  width: 20%;
+  margin-left: 35%;
+  padding: 20px 5%;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+div.button.grizz {
+  background-color: #f39c12;
+}
+div.button.panda {
+  background-color: #D2527F;
+}
+div.button.icebear {
+  background-color: #59ABE3;
+}

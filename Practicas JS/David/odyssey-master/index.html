@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Odyssey Project</title>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+
+  <div class="wrapper">
+    <h1>APUNTES JS</h1>
+
+    <h2>Tipos de datos</h2>
+
+    <ol>
+      <li>Números
+        <ul>
+          <li>Enteros ( int ): <code>var myInteger = 3;</code></li>
+          <li>Racionales ( float ): <code>var myFloat = 3.14;</code></li>
+        </ul>
+      </li>
+      <li>Cadenas ( string ): <code>var myString = "Hello World";</code></li>
+      <li>Lógicos ( boolean ): <code>var myBoolean = true;</code></li>
+      <li><code>null</code></li>
+      <li><code>undefined</code></li>
+    </ol>
+
+    <h2>Operadores</h2>
+
+    <ul>
+      <li>Aritméticos
+        <ul>
+          <li>Sumar: <code>+</code></li>
+          <li>Restar: <code>-</code></li>
+          <li>Multiplicar: <code>*</code></li>
+          <li>Dividir: <code>/</code></li>
+          <li>Módulo: <code>%</code></li>
+        </ul>
+      </li>
+      <li>Cadenas
+        <ul>
+          <li>Concatenar: <code>+</code></li>
+        </ul>
+      </li>
+      <li id="opcomp">Comparación
+        <ul>
+          <li>Igual: <code>==</code></li>
+          <li>Distinto: <code>!=</code></li>
+          <li>Mayor: <code>&gt;</code></li>
+          <li>Menor: <code>&lt;</code></li>
+          <li>Mayor o igual: <code>&gt;=</code></li>
+          <li>Menor o igual: <code>&lt;=</code></li>
+          <li>Idéntico: <code>===</code></li>
+          <li>No Idéntico: <code>!==</code></li>
+        </ul>
+      </li>
+      <li>Lógicos
+        <ul>
+          <li>Negación: <code>!</code></li>
+          <li>Conjunción: <code>&amp;&amp;</code></li>
+          <li>Disyunción: <code>||</code></li>
+        </ul>
+      </li>
+    </ul>
+    
+    <p>Tip: Una operación es una acción que ocurre entre dos operandos a través de un operador (por ejemplo, una concatenación, una suma o una comparación).</p>
+    <p>Tip: Una expresión es un conjunto de una o más operaciones, cuyos operandos pueden ser a su vez expresiones (por ejemplo, concatenar un string con el resultado de una suma entre paréntesis).</p>
+
+    <h2>Estructuras de control de flujo</h2>
+
+    <h3>Condicionales</h3>
+
+    <h4>if ... else</h4>
+
+    <div class="indented">
+      <code>
+        if( condicion ) {<br />
+        &nbsp;&nbsp;...<br />
+        }<br />
+        else<br />
+        {<br />
+        &nbsp;&nbsp;...<br />
+        }
+      </code>
+    </div>
+
+    <h4>switch ... case</h4>
+
+    <div class="indented">
+      <code>
+        switch( variable ) {<br />
+        &nbsp;&nbsp;case 0:<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;...<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;break;<br />
+        &nbsp;&nbsp;case 1:<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;...<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;break;<br />
+        &nbsp;&nbsp;case 2:<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;...<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;break;<br />
+        &nbsp;&nbsp;default:<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;...<br />
+        }
+      </code>
+    </div>
+
+    <p>Un condicional es una ECF que dirige el flujo de ejecución según el resultado de evaluar una condición (generalmente una comparación lógica entre dos elementos).</p>
+
+    <h3>Bucles</h3>
+
+    <h4>while</h4>
+
+    <div class="indented">
+      <code>
+        while( condicion ) {<br />
+        &nbsp;&nbsp;...<br />
+        }
+      </code>
+    </div>
+
+    <h4>do ... while</h4>
+
+    <div class="indented">
+      <code>
+        do {<br />
+        &nbsp;&nbsp;...<br />
+        } while( condicion );
+      </code>
+    </div>
+
+    <h4>for</h4>
+
+    <div class="indented">
+      <code>
+        for( inicial; condicion; cambio ) {<br />
+        &nbsp;&nbsp;...<br />
+        }
+      </code>
+    </div>
+
+    <p>Un bucle es una ECF que repite iterativamente el flujo de ejecución, y se compone de: una situación inicial, una condición de parada (generalmente una comparación lógica) y un cambio de dicha situación.</p>
+
+    <p>Según se definan estos tres elementos, se presentan bucles de tipo iterador (una variable entera que se incrementar o decrementa) o de tipo cerrojo (una variable booleana que invierte su valor).</p>
+
+    <h2>Arrays</h2>
+
+    <div class="indented">
+      <code>
+        var meses = [ "Enero", "Febrero", "Marzo", "Abril", "Mayo" ];
+      </code>
+    </div>
+
+    <h2>Ejemplos</h2>
+
+    <p>Ejemplo 1: <a href="meses.html">Selección del mes</a></p>
+
+    <h2>Ejercicios</h2>
+
+    <p>Ejercicio 1: <a href="carta.html">Carta de presentación</a></p>
+    <p>Ejercicio 2: Fizz Buzz (coming soon)</p>
+    <p>Ejercicio 3: Semáforo (coming soon)</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Probando Bootstrap</title>
+  <meta charset="utf-8">
+  <!-- Garantiza la generación de gráficos correctamente y función de zoom en las pantallas "touch" correcto -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Llamada a los ficheros css, y javascript que necesita Bootstrap para ser utilizado en nuestra página -->
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+  integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/carousel.css" />
+  <!-- SCRIPTS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+  integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+  integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<div class="container-fluid">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Star Wars Fan Page</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Characters</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Movies</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Star Wars I</a>
+            <a class="dropdown-item" href="#">Star Wars II</a>
+            <a class="dropdown-item" href="#">Star Wars III</a>
+            <a class="dropdown-item" href="#">Rogue One</a>
+            <a class="dropdown-item" href="#">Star Wars IV</a>
+            <a class="dropdown-item" href="#">Star Wars V</a>
+            <a class="dropdown-item" href="#">Star Wars VI</a>
+            <a class="dropdown-item" href="#">Star Wars VII</a>
+            <a class="dropdown-item" href="#">Star Wars VIII</a>
+          </div>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Comics</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          About us</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Facebook</a>
+            <a class="dropdown-item" href="#">Twitter</a>
+            <a class="dropdown-item" href="#">Google+</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <div class="row">
+    <div class="col-sm-12 col-md-5 col-lg-3">
+        <div class="well">
+          <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="right" title="Rey is waiting you!">Join Light Side!</button>
+          <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="right" title="Kylo Ren is waiting you!">Join Dark Side!</button>
+
+        </div>
+
+        <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input">Check me out
+            </label>
+          </div>
+          <button type="submit" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal">Submit</button>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    ...
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+        </form>
+
+        <div class="card mt-2 jumbotron hidden-xs" style="width: 19rem;">
+          <img class="card-img-top" src="img/poster.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h4 class="card-title">Star Wars VIII: The Last Jedi</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-secondary">Watch trailer</a>
+            </div>
+        </div>
+
+        <ul class="list-unstyled">
+          <h6>Example heading <span class="badge badge-danger">New</span></h6>
+          <li class="media mt-3">
+            <img class="mr-3" src="img/wars.jpg" alt="Generic placeholder image">
+            <div class="media-body">
+              <h5 class="mt-0 mb-1">List-based media object</h5>Cras sit amet nibh libero, in gravida nulla.
+            </div>
+          </li>
+          <h6>Example heading <span class="badge badge-danger mt-3">New</span></h6>
+          <li class="media my-4">
+            <img class="mr-3" src="img/wars2.png" alt="Generic placeholder image">
+            <div class="media-body">
+              <h5 class="mt-0 mb-1">List-based media object</h5>Cras sit amet nibh libero, in gravida nulla.
+            </div>
+          </li>
+          <li class="media mt-3">
+            <img class="mr-3" src="img/wars.jpg" alt="Generic placeholder image">
+            <div class="media-body">
+              <h5 class="mt-0 mb-1">List-based media object</h5>Cras sit amet nibh libero, in gravida nulla.
+            </div>
+          </li>
+          <li class="media my-4">
+            <img class="mr-3" src="img/wars2.png" alt="Generic placeholder image">
+            <div class="media-body">
+              <h5 class="mt-0 mb-1">List-based media object</h5>Cras sit amet nibh libero, in gravida nulla.
+            </div>
+          </li>
+        </ul>
+    </div>
+
+    <!-- d-block-d-mb-none //mostrar
+    d-none d-mb-block //no mostrar -->
+
+    <div class="hidden-xs col-sm-12 col-md-7 col-lg-5 ">
+      <div class="alert alert-secondary" role="alert">
+        This is a secondary alert—check it out!
+      </div>
+
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Active</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+
+      <h1 class="display-4"><u>Welcome!</u></h1>
+        <p>Over the weekend, journalists from all over the world gathered for a global press event at the Intercontinental Hotel in Los
+          Angeles to learn more about <mark>The Last Jedi</mark>. Hosted by Anthony Breznican, the press conference featured just about
+          every cast member from the film, as well as director Rian Johnson.
+        </p>
+        <p>On the way to the press conference, costumes from the film were on display, giving the press a closeup look at
+        <mark>Luke</mark>, <mark>Rey</mark>, <mark>Kylo Ren</mark>, and <mark>General Leia’s</mark> costumes. A pair of Praetorian
+        Guards protected a printed image of Snoke’s throne room. <mark>BB-8</mark> and <mark>BB-9E</mark> were both on hand to answer
+        questions from the press as well.
+        </p>
+
+          <div id="myCarousel" class="carousel slide mb-3" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="first-slide" src="img/leiaposter.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item">
+              <img class="second-slide" src="img/kyloposter.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+              <img class="third-slide" src="img/lukeposter.jpg" alt="Third slide">
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+
+
+        <p>With the film still shrouded in secrecy to preserve its surprises for fans, the cast and director couldn’t talk about much
+        more than their feelings about the film, but the excitement in the room was palpable. The cast revealed that Johnson had recently
+        shown them all the film, except for Domhnall Gleeson, who plays <mark>General Hux</mark> in The Last Jedi. “I wanted to wait and
+        see it with a huge crowd and see it the way I saw The Force Awakens, with people losing their minds,” Gleeson told the press.
+        “Then I heard the [rest of the cast] lost their minds and now I’m annoyed I didn’t go.”
+        </p>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+          in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+          sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+
+          <blockquote class="blockquote">
+            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. </p>
+            <footer class="blockquote-footer text-right">Darth Vader<cite title="Source Title"></cite></footer>
+          </blockquote>
+
+        <blockquote class="blockquote text-right">
+          <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. </p>
+        <footer class="blockquote-footer">Yoda <cite title="Source Title"></cite></footer>
+        </blockquote>
+
+        <blockquote class="blockquote text-center">
+          <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+          <footer class="blockquote-footer">Obi Wan <cite title="Source Title"></cite></footer>
+        </blockquote>
+
+    </div>
+
+      <div class="col-sm-12 col-md-4 col-lg-4 d-none d-lg-block">
+        <ul class="list-group">
+
+          <img src="img/rey2.jpg" class="img-fluid" alt="Responsive image"></li>
+          <button type="button" class="btn btn-dark">Rey</button></li>
+
+          <img src="img/kylo2.jpg" class="img-fluid" alt="Responsive image">
+          <button type="button" class="btn btn-dark">Kylo Ren</button>
+
+          <img src="img/finn.jpg" class="img-fluid" alt="Responsive image">
+          <button type="button" class="btn btn-dark">Finn</button>
+
+          <img src="img/luke.png" class="img-fluid" alt="Responsive image"></li>
+          <button type="button" class="btn btn-dark">Luke Skywalker</button></li>
+
+          <img src="img/leia2.jpg" class="img-fluid" alt="Responsive image"></li>
+          <button type="button" class="btn btn-dark">Leia Organa</button></li>
+
+          <img src="img/poe.jpg" class="img-fluid" alt="Responsive image"></li>
+          <button type="button" class="btn btn-dark">Poe Dameron</button></li>
+
+          <img src="img/bb8.jpg" class="img-fluid" alt="Responsive image"></li>
+          <button type="button" class="btn btn-dark">BB-8</button></li>
+          <button type="button" class="btn btn-light">Gracias por tu visita!</button></li>
+
+        </ul>
+
+        <!-- <div id="accordion" role="tablist">
+          <div class="card">
+            <div class="card-header" role="tab" id="headingOne">
+              <h5 class="mb-0">
+                <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Collapsible Group Item #1
+                </a>
+              </h5>
+            </div>
+
+            <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" role="tab" id="headingTwo">
+              <h5 class="mb-0">
+                <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Collapsible Group Item #2
+                </a>
+              </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Star Wars Fan Page</a>
+</nav>
+
+</div>
+
+
+</body>
+</html>
