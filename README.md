@@ -1,2 +1,2 @@
 # Ejemplos-Curso-Front-End
-Aprendiendo html y CSS
+Aprendiendo html, CSS, JavaScript, jQuery, Bootstrap...
