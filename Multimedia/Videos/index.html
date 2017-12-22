@@ -9,13 +9,10 @@
 
 </head>
 <body>
-  <wrapper>
-    <div>
+    <div class="wrapper">
       <button onclick="enableControls()" class="button" type="button">Enable controls</button>
       <button onclick="disableControls()" class="button1" type="button">Disable controls</button>
       <button onclick="checkControls()" class="button" type="button">Check controls status</button>
-
-    </div>
 
 
 
@@ -25,21 +22,21 @@
       Your browser does not support HTML5 video.
     </video>
 
-    <button onclick="play()" class="button"type="button">Dale al play!</button>
-    <button onclick="pause()" class="button1" type="button">Pausa :( </button>
+    <button id="change_video" class="button1" type="button">Cambiar video</button>
+    <button id="play_video" class="button"type="button">Dale al play!</button>
+    <button id="pause_video" class="button1" type="button">Pausa :( </button>
 
     <audio controls id="myAudio" class="audio">
-      <source src="media/koreanas.mp3" type="audio/mp3" />
+      <source src="media/DJ Sona Kinetic.mp3" type="audio/mp3" />
       Your browser does not support HTML5 audio.
     </audio>
 
-    <button onclick="playAudio()" class="button"type="button">Play K-Pop</button>
-    <button onclick="pauseAudio()" class="button1" type="button">Pause K-Pop :( </button>
+    <button id="play_audio" class="button"type="button">Play DJ Sona</button>
+    <button id="pause_audio" class="button1" type="button">Pause DJ Sona :( </button>
 
     <script type="text/javascript" src="js/scripts.js"></script>
 
-  </wrapper>
-
+  </div>
 
 </body>
 </html>
