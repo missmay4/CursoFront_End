@@ -1,0 +1,74 @@
+<script type="text/javascript">
+
+	function Persona(nombre, edad) {
+		// Propiedades
+		this.nombre = nombre;
+		this.edad = edad;
+
+		// Metodos
+		this.decirNombre = function() {
+			return this.nombre;
+		}
+		// cumplir()
+	}
+
+	var persona1 = new Persona("David", 36);
+	//console.log(persona1.nombre); // David
+	//console.log( persona1.decirNombre() ); // David
+
+	var persona2 = new Persona("Goliat", 578);
+	//console.log( persona2.decirNombre() ); // Goliat
+
+	// Añadir nuevo método a todos los objetos (al prototio)
+	Persona.prototype.cambiarNombre = function(nombre) {
+		this.nombre = nombre;
+	};
+
+	persona1.cambiarNombre("Clark Kent");
+	//console.log( persona1.decirNombre() ); // Clark Kent
+
+	persona2.cambiarNombre("Max Power");
+	//console.log( persona2.decirNombre() ); // Max Power
+
+	// Añadir nueva propiedad: SE PUEDE!!!
+	Persona.prototype.color = "N";
+
+	// ... y afecta a los objetos PRECREADOS que comparten el mismo prototipo
+	//console.log( persona1.color ); // N
+	//console.log( persona2.color ); // N
+
+	// Modificar propiedad anterior: NO SE PUEDE!!!
+	Persona.prototype.nombre = "pepe";
+	
+	var persona3 = new Persona("Eustraquea", 11);
+	
+	//console.log( persona3.nombre ); // N
+	//console.log( persona1.nombre ); // N
+
+	// -------------------- HERENCIA -------------------- 
+
+	function Jedi(nombre, edad, fuerza) {
+		Persona.call(this, nombre, edad);
+		this.fuerza = fuerza;
+	}
+
+	// Crear un jedi a partir de un nuevo constructor que llama
+	// al constructor de la superclase
+	var jedi1 = new Jedi("Obi Wan", 45, 40);
+	console.log( jedi1.decirNombre() ); // Obi Wan
+
+	// --------------------------------------------
+
+	function Sith(nombre, edad, ladoOscuro) {
+		Persona.call(this, nombre, edad); // Nazco como mi padre
+		this.ladoOscuro = ladoOscuro; // Añado cosas mías
+	}
+	
+	// Mi prototipo es el de mi padre (heredo TODO lo que tiene)
+	Sith.prototype = Object.create(Persona.prototype);
+
+	var sith1 = new Sith("Obi Wan", 45, 86);
+	sith1.cambiarNombre("Obi Juan");
+	console.log( sith1.decirNombre() ); // Obi Juan
+
+</script>

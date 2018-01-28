@@ -1,0 +1,110 @@
+<script type="text/javascript">
+// data: anything
+// array []
+// callback: function(argument1, argument2)
+
+/* -------------------------------------------------------------- */
+
+var filas = [];
+var columnas1 = [1, 2, 3];
+var columnas2 = [4, 5, 6];
+var columnas3 = [7, 8, 9];
+
+filas.push(columna1); // filas => [[1,2,3]]
+filas.push(columna2); // filas => [[1,2,3], [4,5,6]]
+filas.push(columna3); // filas => [[1,2,3], [4,5,6], [7,8,9]]
+
+for (var i = 0; i < filas.lenght; i++) {
+  for (var j = 0; j < filas[i].lenght; j++) {
+    console.log(filas[i][j]);
+  }
+}
+
+/* -------------------------------------------------------------- */
+
+/*function addToArraySync(dato, lista) {
+  // Si el array no es un array
+  if (!Array.isArray(lista)) {
+    console.log("La lista no es un array");
+  } else {
+    lista.push(dato); // Añade el elemento data al array al final
+  }
+}*/
+
+var hamburguesa = [];
+
+function addToArrayCallback(dato, lista, funcionCallback) {
+  // Si el array no es un array
+  if (!Array.isArray(lista)) {
+    funcionCallback(("La lista no es un array"), null);
+  } else {
+    lista.push(dato);
+    funcionCallback(null, lista);
+  }
+}
+
+function callBackHamburguesas(mensajeError, lista){
+  // Si hay Error
+  if (mensajeError !== null){
+    return console.log(mensajeError);
+  }
+  else {
+    console.log(lista);
+  }
+
+}
+
+addToArrayCallback("pan de abajo", hamburguesa, callBackHamburguesas);
+addToArrayCallback("carne", hamburguesa, callBackHamburguesas);
+
+
+/* --------------- PROMESAS -------------------- */
+
+function pintarHamburguesa(lista){
+  console.log(hamburguesa); // Muestro consola
+}
+function decirError(){
+  console.log("Error, no se ha podido aumentar la hamburguesa");
+}
+
+function exito(dato, lista){
+  lista.push(dato); // Mi accion
+  console.log(lista); // Muestro consola
+}
+
+function fracaso (){
+  console.log("No existe el array");
+}
+
+function addToArrayPromise(dato, lista){
+  //var promesa = new Promise(una funcion con 2 parametros que a su vez son fuciones manejadoras (una para si todo ha ido bien y otra por si algo ha ido mal));
+  var promesa = new Promise(function (exito, fracaso){
+    if(!Array.isArray(lista)) {
+      fracaso();
+    }
+    else {
+      exito(dato, lista);
+    }
+
+    return promesa;
+  }
+}
+
+addToArrayPromise("cebolla", hamburguesa)
+    .then(pintarHamburguesa)
+    .catch(decirError);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

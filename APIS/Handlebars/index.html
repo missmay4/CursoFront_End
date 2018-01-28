@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Handlebars</title>
+</head>
+<body>
+	<script id="entry-template" type="text/x-handlebars-template">
+	<div>
+		{{#each enterprise}}
+
+		{{name}} is from {{checkCity city}}.
+
+		{{#checkName this}}
+		<li>Nombre empresa: {{name}}</li>
+		{{/checkName}}
+
+		{{/each}}
+
+	</div>
+	</script>
+	
+
+	<script type="text/javascript" src="js/handlebars-v4.0.11.js"></script>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+<script type="text/javascript">
+function addToArrayAsync(dato, lista, funcionCallback) {
+  // Si el array no es un array
+  if (!Array.isArray(lista)) {
+  	funcionCallback("La lista no es un array", null);
+  } else
+  {
+  	lista.push(dato);
+  	funcionCallback(null, lista);
+  }
+}
+</script>

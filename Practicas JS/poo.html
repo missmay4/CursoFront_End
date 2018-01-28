@@ -1,0 +1,107 @@
+<script type="text/javascript">
+
+// La interfaz es la deficinion de las funciones, los parametros y lo que devuelven, sin saber lo que ocurre dentro de la funcion(implementacion)
+function Persona(nombre, edad){
+  // Propiedades
+  this.nombre = nombre;
+  this.edad = edad;
+
+  // Metodos
+  this.decirNombre = function(){
+    return this.nombre;
+  }
+  // Cumplir años cumplir()
+}
+
+var persona1 = new Persona ("David", 36);
+//console.log(persona1.nombre);
+console.log(persona1.decirNombre()); // David
+
+var persona2 = new Persona ("Goliat", 578);
+console.log(persona2.decirNombre()); // Goliat
+
+// Cambiar el nombre a Goliat
+// Prototipo de todas las personas, ahora se pueden cambiar todos los nombres
+
+Persona.prototype.cambiarNombre = function(nombre){
+  this.nombre = nombre;
+};
+
+persona2.cambiarNombre("Max Power");
+console.log(persona2.decirNombre()); // Max Power
+persona1.cambiarNombre("Clark Kent");
+console.log(persona1.decirNombre()); // Clark Kent
+
+console.log(persona1.decirNombre()); // Clark Kent
+console.log(persona2.decirNombre()); // Max Power
+
+Persona.prototype.color = "N";
+
+var persona3 = new Persona("Eustraquea", 11);
+console.log(persona3.color; // N
+
+/* Mi padre es el prototipo / Yo soy el prototipo de mi hijo --------- Abstraccion */
+
+/* ----------------- HERENCIA -------------------- */
+
+//var jedi1 = new Persona("Obi Wan", 45);
+//console.log(jedi1.decirNombre());
+
+// "Yo soy el prototipo de mi hijo"
+// "Yo (Persona) soy el prototipo de mi hijo (Jedi.prototype)"
+
+function Jedi(nombre, edad, fuerza){
+  Persona.call(this, nombre, edad);
+  this.fuerza = fuerza;
+}
+
+// Crear un Jedi a partir de un nuevo constructor que llama al constructor de la superclase
+var jedi1 = new Jedi("Obi Wan", 45, 40);
+console.log(jedi1.decirNombre()); // Obi Wan
+
+/* ------------------------------------ */
+
+Jedi.prototype = Object.create(Persona.prototype);
+
+var jedi2 = new Jedi("Qui Gong", 67, 78);
+console.log(jedi2.cambiarNombre("Obi Juan Quenove"));
+
+
+Sith.prototype = Object.create(Persona.prototype);
+var sith1 = new
+
+
+
+
+
+function Sith(nombre, edad, ladoOscuro){
+  Persona.call(this, nombre, edad); // Nazco como mi padre
+  this.ladoOscuro = ladoOscuro; // Añado cosas mias
+}
+// mi prototipo es el de mi padre (heredo todo lo que tiene)
+Sith.prototype = Object.create(Persona.prototype);
+
+var sith1 = new Sith("Obi Wan", 45, 86);
+sith1.cambiarNombre("Obi Juan");
+console.log(sith1.decirNombre()); // Obi Juan
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

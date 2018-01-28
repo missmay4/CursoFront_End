@@ -1,0 +1,92 @@
+<script type="text/javascript">
+
+/* Bonustrack: Bidimensional array example */
+/*
+var filas = [];
+var columna1 = [1,2,3];
+var columna2 = [4,5,6];
+var columna3 = [7,8,9];
+
+filas.push(columna1); // filas => [[1,2,3]]
+filas.push(columna2); // filas => [[1,2,3],[4,5,6]]
+filas.push(columna3); // filas => [[1,2,3],[4,5,6],[7,8,9]]
+
+for(var i=0; i < filas.length; i++) {
+	for(var j=0; j < filas[i].length; j++) {
+		console.log(filas[i][j]);
+	}
+}
+*/
+
+/* ------ Callback asynchronous solution ------ */
+
+var hamburguesa = [];
+
+/*
+data: anything
+array: []
+callback: function()
+*/
+function addToArrayCallback(dato, lista, funcionCallback) {
+  // Si el array no es un array
+  if (!Array.isArray(lista)) {
+  	funcionCallback('No existe el array', null);
+  } else
+  {
+  	lista.push(dato);
+  	funcionCallback(null, lista);
+  }
+}
+
+function callBackHamburguesas(mensajeError,lista) {
+  
+  // Si hay error
+  if (mensajeError !== null) {
+  	return console.log(mensajeError);
+  }
+  else
+  {
+  	console.log(lista); // Muestro consola
+  }
+}
+
+addToArrayCallback("pan de abajo", hamburguesa, callBackHamburguesas);
+addToArrayCallback("carne", hamburguesa, callBackHamburguesas);
+
+/* ------ Promise asynchronous solution ------ */
+
+function comerHamburguesa() {
+  hamburguesa = [];
+}
+
+function decirError() {
+  console.log('Error, no se ha podido aumentar la hamburguesa');
+}
+
+function exito(dato, lista) {
+	lista.push(dato); // Mi accion
+	console.log(lista); // Muestro consola
+}
+
+function fracaso() {
+	console.log('No existe el array'); // Muestro error
+}
+
+function addToArrayPromise(dato, lista) {
+	//var promesa = new Promise( /* una funcion con dos parametros que a su vez son funciones que manejan los casos de exito o fracaso */ );
+	var promesa = new Promise(function(exito, fracaso) {
+
+	    // Si el array no es un array
+		if (!Array.isArray(lista)) { fracaso(); }
+	    else { exito(dato, lista); }
+	});
+
+    return promesa;
+}
+
+addToArrayPromise("cebolla", hamburguesa)
+	.then(pintarHamburguesa)
+	.then(cobrarHamburguesa)
+	.catch(decirError);
+
+</script>

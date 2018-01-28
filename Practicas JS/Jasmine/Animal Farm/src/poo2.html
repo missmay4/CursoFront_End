@@ -1,0 +1,25 @@
+<script>
+  function Persona(primerNombre) { // Defino el constructor
+    this.primerNombre = primerNombre;
+  }
+
+  Persona.prototype.presentarse = function() { // Añado cosas al prototipo
+    alert("Hola, soy " + this.primerNombre);
+  };
+
+  var persona1 = new Persona("D");
+  console.log(persona1.primerNombre);
+
+  persona1.primerNombre = "B"; // Toco el objeto
+  console.log(persona1.primerNombre); // ... y todo ok
+
+  Persona.segundoNombre = "A"; // Toco el constructor
+  console.log(persona1.segundoNombre); // ... y no se puede
+
+  Persona.prototype.segundoNombre = "A"; // Toco el prototipo
+  console.log(persona1.segundoNombre); // ... y sus objetos precreados cambian!
+
+  var persona2 = new Persona("R");
+  console.log(persona2.segundoNombre); // ... y los nuevos también!!!
+
+</script>
