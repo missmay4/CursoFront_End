@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 //ES6
 
 function myArray() {
@@ -32,7 +33,7 @@ Suma(2, 3, 4, 5);
 var valores = [2, 345, 23, 33, 2, 11, 4677];
 
 function suma2(a, b, ...args) {
-  let resultado += i;
+  let resultado += i
 
   for (const i of args) {
     resultado += i;
