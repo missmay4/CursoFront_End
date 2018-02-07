@@ -14,13 +14,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Definir tareas
-  // Primera tarea: Validación de código
-  jshint: {
-    options: {
-      reporter: require('jshint-stylish')
-    },
-    build: ['Gruntfile.js', 'src/**/*.js']
-  }
-
+  // Tarea por defecto.
+  grunt.registerTask('default', ['uglify']);
+  grunt.registerTask('default', ['js', 'uglify']);
 
 };
