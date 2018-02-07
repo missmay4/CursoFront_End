@@ -1,2 +1,13 @@
 # Ejemplos-Curso-Front-End
-Aprendiendo html, CSS, JavaScript, jQuery, Bootstrap...
+### Learning... 
+* HTML
+* CSS
+* JavaScript
+  * jQuery
+  * JSON
+  * Ajax
+  * TypeScript
+  * ES6
+  * NodeJS, Gulp, Grunt
+* Bootstrap
+* APIS
